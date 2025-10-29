@@ -1,2 +1,2 @@
-# lc2
-Late Code Chunking (LC Square)
+# Late Code Chunking (LC Square)
+
