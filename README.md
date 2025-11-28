@@ -63,8 +63,3 @@ uv pip install vllm --torch-backend=cu128
 - https://github.com/microsoft/CodeT/tree/main/RepoCoder
 - https://github.com/amazon-science/cceval
 - https://github.com/microsoft/CodeBERT/tree/master/UniXcoder
-
-## Inference and Evaluation
-```bash
-./run.sh
-```
