@@ -4,6 +4,35 @@
 - RepoEval (EMNLP 2023): https://github.com/microsoft/CodeT/tree/main/RepoCoder
 - CrossCodeEval (NeurIPS 2023): https://github.com/amazon-science/cceval
 
+## Directory Overview
+```
+late-code-chunking/
+├── evaluate.py
+├── generate.py
+├── run.sh (run evaluate.py and generate.py)
+├── data/ (retrieval results)
+│   ├── cceval_custom/
+│   └── repoeval_custom/
+├── output/ (inference and evaluation results)
+│   ├── cceval_python-bm25-lc2_deepseek-coder-1.3b-base.jsonl
+│   ├── cceval_python-bm25-lc2_deepseek-coder-1.3b-base_eval.jsonl
+│   ├── cceval_python-unixcoder-lc2_deepseek-coder-1.3b-base.jsonl
+│   ├── cceval_python-unixcoder-lc2_deepseek-coder-1.3b-base_eval.jsonl
+│   ├── ...
+└── retrieval/ (retrievals with different chunking strategies)
+    ├── run_cceval_unixcoder_chunk.py
+    ├── run_cceval_unixcoder_chunk.sh
+    ├── run_cceval_unixcoder_function.py
+    ├── run_cceval_unixcoder_function.sh
+    ├── run_cceval_unixcoder_lc2.py
+    ├── run_cceval_unixcoder_lc2.sh
+    ├── run_cceval_unixcoder_spilt_aggregate.py
+    ├── run_cceval_unixcoder_spilt_aggregate.sh
+    ├── run_cceval_unixcoder_window.py
+    ├── run_cceval_unixcoder_window.sh
+    ├── ...
+```
+
 ## Experimantal Setup
 ### Code Retrieval
 ```bash
