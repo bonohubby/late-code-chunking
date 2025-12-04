@@ -12,7 +12,7 @@ late-code-chunking/
 ├── generate.py
 ├── generate.sh
 ├── data/
-│   ├── cceval/    # CrossCodeEval benchmark
+│   ├── cceval/           # CrossCodeEval benchmark
 │   │   ├── python/
 │   │   ├── ...
 │   ├── cceval_custom/    # Retrieval results
@@ -21,7 +21,7 @@ late-code-chunking/
 │   ├── cceval_rawdata/   # CrossCodeEval dataset
 │   │   ├── 0x80-isolate-package-4fe8eaf/
 │   │   ├── ...
-│   ├── repoeval/  # RepoEval benchmark
+│   ├── repoeval/         # RepoEval benchmark
 │   │   ├── api_level_completion_1k_context_codegen.test.jsonl
 │   │   ├── ...
 │   ├── repoeval_custom/  # Retrieval results
@@ -30,11 +30,11 @@ late-code-chunking/
 │   ├── repoeval_rawdata/ # RepoEval dataset
 │   │   ├── alibaba_FederatedScope/
 │   │   ├── ...
-├── output/    # Inference and evaluation results
+├── output/               # Inference and evaluation results
 │   ├── cceval_python-unixcoder-lc2_deepseek-coder-1.3b-base.jsonl
 │   ├── cceval_python-unixcoder-lc2_deepseek-coder-1.3b-base_eval.jsonl
 │   ├── ...
-└── retriever/  # Retrievers with different chunking strategies
+└── retriever/            # Retrievers with different chunking strategies
     ├── run_cceval_unixcoder_lc2.py
     ├── run_cceval_unixcoder_lc2.sh
     ├── ...
