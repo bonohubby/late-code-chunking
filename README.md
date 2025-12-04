@@ -41,7 +41,7 @@ late-code-chunking/
 ```
 
 ## Experimantal Setup
-### Code Retrieval
+### Retrieval
 ```bash
 # Python 3.12.12
 conda install -c pytorch -c nvidia faiss-gpu=1.12.0
