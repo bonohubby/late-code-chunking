@@ -92,7 +92,7 @@ def main():
                     )
 
                 definitions = get_functions(src_path)
-                for def_name, def_signature, def_body in definitions:
+                for def_name, def_signature in definitions:
                     def_kb[repo][def_name] = {
                     "file": src_path[len(ROOT_DIR) + len(repo) + 2:],
                     "signature": def_signature.split("\n"),
@@ -134,16 +134,18 @@ def main():
                     crossfile_context += "# the below code fragment can be found in:\n"
                     crossfile_context += f"# {indices[repo]['data'][i]['file']}\n"
 
-                    for call in get_function_calls(indices[repo]["data"][i]["cc_for_ast"])[:5]:
+                    for call in get_function_calls(indices[repo]["data"][i]["cc_for_ast"])[:3]:
                         if call not in def_kb[repo]:
                             continue
 
                         if call in called:
                             continue
-                        
+
                         if def_kb[repo][call]["file"] == file:
                             continue
 
+                        print('\n'.join(def_kb[repo][call]["signature"]))
+                        print('=' * 5)
                         crossfile_context += "\n".join([f"# {c}" for c in def_kb[repo][call]["signature"]]) + "\n\n"
 
                     crossfile_context += ("\n".join([f"# {c}" for c in indices[repo]["data"][i]["cc"]]) + "\n\n")
