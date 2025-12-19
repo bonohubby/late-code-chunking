@@ -71,29 +71,29 @@ uv pip install vllm --torch-backend=cu128
 ./evaluate.sh
 
 output/cceval_python-unixcoder-lc2_deepseek-coder-1.3b-base.jsonl
-Total:2664, EM Count:696
-EM: 26.13
-ES: 72.0
+Total:2664, EM Count:702
+EM: 26.35
+ES: 71.92
 
 output/cceval_java-unixcoder-lc2_deepseek-coder-1.3b-base.jsonl
-Total:2139, EM Count:523
-EM: 24.45
-ES: 66.97
+Total:2139, EM Count:518
+EM: 24.22
+ES: 66.79
 
 output/cceval_csharp-unixcoder-lc2_deepseek-coder-1.3b-base.jsonl
-Total:1768, EM Count:377
-EM: 21.32
-ES: 67.89
+Total:1768, EM Count:384
+EM: 21.72
+ES: 68.19
 
 output/repoeval_line-unixcoder-lc2_deepseek-coder-1.3b-base.jsonl
-Total:1600, EM Count:723
-EM: 45.19
-ES: 73.01
+Total:1600, EM Count:722
+EM: 45.12
+ES: 72.87
 
 output/repoeval_api-unixcoder-lc2_deepseek-coder-1.3b-base.jsonl
-Total:1600, EM Count:717
-EM: 44.81
-ES: 74.36
+Total:1600, EM Count:720
+EM: 45.0
+ES: 74.48
 ```
 
 ## Referenced Code
