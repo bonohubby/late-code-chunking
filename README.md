@@ -1,4 +1,8 @@
-# Late Code Chunking (LC-Square) for Repository-Level Code Completion
+# Late Code Chunking: A Code Chunking Strategy for Repository-Level Code Completion
+
+## Paper
+
+- ACL 2026 Main: [Late Code Chunking: A Code Chunking Strategy for Repository-Level Code Completion](https://aclanthology.org/2026.acl-short.64/)
 
 ## Benchmarks for Repository-Level Code Completion
 - RepoEval (EMNLP 2023): https://github.com/microsoft/CodeT/tree/main/RepoCoder
@@ -100,3 +104,26 @@ ES: 74.48
 - https://github.com/microsoft/CodeT/tree/main/RepoCoder
 - https://github.com/amazon-science/cceval
 - https://github.com/microsoft/CodeBERT/tree/master/UniXcoder
+
+## Citation
+
+```bibtex
+@inproceedings{oh-lee-2026-late,
+    title = "Late Code Chunking: A Code Chunking Strategy for Repository-Level Code Completion",
+    author = "Oh, Seungmin  and
+      Lee, Eunseok",
+    editor = "Liakata, Maria  and
+      Moreira, Viviane P.  and
+      Zhang, Jiajun  and
+      Jurgens, David",
+    booktitle = "Proceedings of the 64th Annual Meeting of the {A}ssociation for {C}omputational {L}inguistics (Volume 2: Short Papers)",
+    month = jul,
+    year = "2026",
+    address = "San Diego, California, United States",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2026.acl-short.64/",
+    pages = "780--786",
+    ISBN = "979-8-89176-391-3",
+    abstract = "This paper introduces Late Code Chunking (LC$^2$), a chunking strategy designed to improve the semantic understanding of code segments for Large Language Models (LLMs). Repository-level code completion requires predicting the completion of unfinished code by leveraging cross-file context spread across a repository. However, when retrieved fragments have missing semantics{---}the loss of structural or behavioral information during chunking{---}LLMs struggle to interpret the target code. To address this, LC$^2$ refines retrieved chunks by constructing a dual context: a ``Code Retrieval Context'' optimized for similarity-based search, and a ``Code Comprehension Context'' that serves as a late enrichment step through context expansion and augmentation. This dual-context design reduces information loss due to chunking and enhances the ability of LLMs to utilize retrieved code. Additionally, we introduce an Asymmetric Query-Chunk Sizing strategy to further optimize retrieval quality by minimizing query noise. Our experiments demonstrate that LC$^2$ provides robust performance gains, achieving a statistically significant 19.7{\%} improvement in Exact Match accuracy on the CrossCodeEval benchmark compared to the best existing chunking method."
+}
+```
